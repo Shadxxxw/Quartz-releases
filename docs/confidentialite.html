@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUARTZ — politique de confidentialité</title>
+<link rel="icon" href="q.png">
+<link rel="stylesheet" href="_socle.css">
+</head>
+<body>
+<main>
+
+  <div class="marque">
+    <img src="q.png" alt="">
+    <div>
+      <h1>Confidentialité</h1>
+      <p class="note">QUARTZ — dernière mise à jour : 13 septembre 2026</p>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <p><strong>Votre portefeuille reste sur votre machine.</strong> Ses
+    positions, ses prix, son journal : rien de tout cela ne part. Trois choses
+    seulement sortent, et cette page dit lesquelles, pourquoi, et combien de
+    temps elles sont gardées.</p>
+  </div>
+
+  <h2>Ce que la connexion Google transmet à QUARTZ</h2>
+  <p>QUARTZ demande trois autorisations, et seulement celles-là :
+  <code>openid</code>, <code>email</code>, <code>profile</code>. Google lui
+  remet alors un jeton d'identité qui contient :</p>
+  <ul>
+    <li>votre identifiant de compte Google ;</li>
+    <li>votre adresse e-mail ;</li>
+    <li>votre nom d'affichage, s'il existe.</li>
+  </ul>
+  <p>QUARTZ ne demande <em>aucun</em> accès à vos messages, vos fichiers, vos
+  contacts ou votre agenda, et ne pourrait pas y accéder même s'il le voulait :
+  ces autorisations ne lui ont pas été accordées.</p>
+
+  <h2>Ce que QUARTZ en fait</h2>
+  <p>Ces trois informations sont écrites dans un fichier local, sur votre
+  ordinateur :</p>
+  <p><code>%LOCALAPPDATA%\QUARTZ\etat\sessions\</code></p>
+  <p>Elles servent à une seule chose : savoir à quel compte appartient le
+  portefeuille affiché, pour que deux personnes qui utilisent le même
+  ordinateur ne voient pas celui de l'autre.</p>
+
+  <h2>Ce qui sort de votre machine</h2>
+  <p>QUARTZ contacte quatre services :</p>
+  <ul>
+    <li><strong>Google</strong>, au moment de la connexion, pour échanger le
+    code d'autorisation contre le jeton d'identité — c'est vous qui vous
+    connectez, comme sur n'importe quel site ;</li>
+    <li><strong>Supabase</strong> (Supabase Inc., hébergement dans l'Union
+    européenne), qui tient la liste des accès et distribue les cibles du
+    portefeuille. C'est le seul service qui reçoive des données vous
+    concernant ; les deux paragraphes suivants disent exactement
+    lesquelles ;</li>
+    <li><strong>Binance</strong>, pour relever les prix publics des marchés.
+    Ces requêtes ne portent aucune information vous concernant ;</li>
+    <li><strong>GitHub</strong>, pour vérifier qu'une mise à jour existe et la
+    télécharger. Ces requêtes ne portent aucune information vous concernant.</li>
+  </ul>
+
+  <h2>Votre accès</h2>
+  <p>Pour savoir si votre accès est ouvert, QUARTZ conserve chez Supabase votre
+  adresse e-mail, votre identifiant de compte Google, la date d'ouverture, la
+  date du dernier appel, et le cas échéant le motif d'une suspension — celui-là
+  même qui vous est affiché.</p>
+  <p><strong>Si vous vous connectez alors que les inscriptions sont fermées, ou
+  qu'il ne reste plus de place, votre adresse est tout de même enregistrée</strong>
+  — sans quoi il serait impossible de vous rappeler pour vous ouvrir l'accès.
+  Le programme vous le dit au moment du refus. Cet enregistrement repose sur
+  l'intérêt légitime de pouvoir répondre aux personnes qui se présentent ; il
+  est effacé automatiquement au bout de <strong>90 jours</strong> si aucun accès
+  n'a été ouvert entre-temps, et vous pouvez en demander l'effacement immédiat à
+  l'adresse indiquée en bas de page.</p>
+
+  <h2>Ce que la boucle rapporte</h2>
+  <p>Quand un portefeuille de papier tourne, le programme envoie un signe de vie
+  au plus quatre fois par heure. Ce signe contient, et rien d'autre :</p>
+  <ul>
+    <li>la valeur de votre portefeuille de papier (<em>équité</em>) et son
+    exposition totale (<em>brut</em>) ;</li>
+    <li>le nombre de tours effectués, et si la boucle est vivante ;</li>
+    <li>la version du programme, l'âge des cibles en main, un identifiant
+    d'installation tiré au hasard ;</li>
+    <li>le motif d'un arrêt, et un message d'erreur tronqué à deux cents
+    caractères, s'il y en a un.</li>
+  </ul>
+  <p><strong>Aucune position, aucun poids par marché, aucun prix.</strong>
+  Ce relevé sert à savoir si le programme fonctionne chez ses utilisateurs.
+  Mais c'est bien une donnée personnelle — la courbe de valeur d'un
+  portefeuille, rattachée à une personne identifiée —, et c'est pourquoi elle
+  est annoncée ici plutôt que laissée à découvrir. Elle est effacée
+  automatiquement au bout de <strong>90 jours</strong>.</p>
+
+  <h2>Ce que QUARTZ ne fait pas</h2>
+  <ul>
+    <li>Aucune donnée n'est vendue, louée ou partagée avec un tiers.</li>
+    <li>Aucune publicité, aucun traceur, aucune mesure d'audience.</li>
+    <li>Aucun profilage, aucune décision automatisée vous concernant.</li>
+    <li>Aucune clé d'échange n'est demandée. Le portefeuille est de papier :
+    aucun ordre n'est envoyé, aucun compte de courtage n'est touché.</li>
+  </ul>
+
+  <h2>Combien de temps</h2>
+  <p>Les relevés de la boucle et les adresses enregistrées sans accès ouvert
+  sont effacés au bout de 90 jours, automatiquement. Les décisions prises sur un
+  accès — ouverture, suspension, retrait — sont gardées aussi longtemps que
+  l'accès existe, parce qu'elles expliquent son état.</p>
+  <p>La session locale expire d'elle-même après sept jours sans usage. Vous
+  pouvez l'effacer immédiatement avec la commande <code>/logout</code> dans le
+  programme, ou en supprimant le dossier ci-dessus. Vous pouvez aussi retirer
+  l'accès de QUARTZ depuis
+  <a href="https://myaccount.google.com/permissions">les autorisations de votre
+  compte Google</a> — QUARTZ ne conserve rien chez Google qui survivrait à ce
+  retrait.</p>
+
+  <h2>Vos droits</h2>
+  <p>Ce qui est sur votre machine est sous votre main directe : les consulter,
+  c'est ouvrir les fichiers ; les effacer, c'est les supprimer.</p>
+  <p>Pour ce qui est conservé chez Supabase — votre accès et les relevés de la
+  boucle —, vous disposez des droits d'accès, de rectification, d'effacement,
+  de limitation et de portabilité. Vous pouvez également
+  <strong>vous opposer</strong> à l'enregistrement de votre adresse, puisqu'il
+  repose sur l'intérêt légitime et non sur votre consentement. Écrivez à
+  l'adresse ci-dessous : il n'y a pas de formulaire, il y a quelqu'un qui
+  répond. Vous pouvez enfin saisir la CNIL si la réponse ne vous satisfait
+  pas.</p>
+
+  <hr>
+  <footer>
+    <p>Responsable du traitement : Axel Dewitt.<br>
+    Contact : <a href="mailto:axel.dewitt31@gmail.com">axel.dewitt31@gmail.com</a><br>
+    <a href="index.html">← QUARTZ</a></p>
+  </footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUARTZ — portefeuille de papier</title>
+<link rel="icon" href="q.png">
+<link rel="stylesheet" href="_socle.css">
+</head>
+<body>
+<main>
+
+  <div class="marque">
+    <img src="q.png" alt="">
+    <div>
+      <h1>QUARTZ</h1>
+      <p class="note">Portefeuille de papier, sur perpétuels Binance USD-M.</p>
+    </div>
+  </div>
+
+  <p>QUARTZ tient un portefeuille <strong>de papier</strong> : il calcule des
+  positions, les suit dans le temps et en affiche la courbe. Aucune clé
+  d'échange n'est demandée, aucun ordre n'est envoyé nulle part, et aucun ne le
+  sera dans cette version.</p>
+
+  <div class="bloc">
+    <p><strong>Le rendement honnête mesuré hors échantillon est de +8,3 %/an</strong>,
+    pas les chiffres bruts que l'on voit passer. Les coûts relevés en teneur
+    sont de 4,4 bp. Le verdict complet, avec ses réserves, est livré dans le
+    programme — commande <code>/verdict</code>.</p>
+  </div>
+
+  <h2>Installer</h2>
+  <p>Téléchargez la dernière version, décompressez, lancez <code>quartz.exe</code>.
+  La connexion se fait par compte Google au lancement. Le PC doit rester
+  allumé : c'est lui qui fait tourner la boucle.</p>
+  <p><a href="https://github.com/Shadxxxw/Quartz-releases/releases/latest">Télécharger
+  la dernière version →</a></p>
+
+  <h2>Mises à jour</h2>
+  <p>Automatiques. Chaque version est décrite par un manifeste signé en Ed25519 ;
+  le programme refuse toute archive dont la signature, la taille ou l'empreinte
+  ne correspond pas, et refuse de revenir à une version antérieure.</p>
+  <p class="note">La vérification ne repose pas sur TLS seul. TLS fait confiance
+  à cent cinquante autorités de certification et à l'hébergeur ; la signature ne
+  fait confiance qu'à une seule clé. Les deux, jamais l'un ou l'autre.</p>
+
+  <h2>Vos données</h2>
+  <p>La connexion Google sert à savoir à qui appartient le portefeuille et si
+  votre accès est ouvert. Vos positions, vos prix et votre journal restent sur
+  votre machine ; ce qui en sort — la valeur du portefeuille, quatre fois par
+  heure — est listé en toutes lettres.
+  <a href="confidentialite.html">Politique de confidentialité →</a></p>
+
+  <hr>
+  <footer>
+    <p>Contact : <a href="mailto:axel.dewitt31@gmail.com">axel.dewitt31@gmail.com</a><br>
+    QUARTZ n'est pas un conseil en investissement.</p>
+  </footer>
+
+</main>
+</body>
+</html>
