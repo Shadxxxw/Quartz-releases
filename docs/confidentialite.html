@@ -14,15 +14,16 @@
     <img src="q.png" alt="">
     <div>
       <h1>Confidentialité</h1>
-      <p class="note">QUARTZ — dernière mise à jour : 13 septembre 2026</p>
+      <p class="note">QUARTZ — dernière mise à jour : 2 octobre 2026</p>
     </div>
   </div>
 
   <div class="bloc">
-    <p><strong>Votre portefeuille reste sur votre machine.</strong> Ses
-    positions, ses prix, son journal : rien de tout cela ne part. Trois choses
-    seulement sortent, et cette page dit lesquelles, pourquoi, et combien de
-    temps elles sont gardées.</p>
+    <p><strong>Votre portefeuille de papier est le même sur chacun de vos
+    appareils.</strong> Pour cela, une copie de votre livre — ses positions, sa
+    courbe, son journal — est gardée chez Supabase, rattachée à votre compte.
+    Cette page dit tout ce qui sort de votre machine, pourquoi, et combien de
+    temps c'est gardé.</p>
   </div>
 
   <h2>Ce que la connexion Google transmet à QUARTZ</h2>
@@ -53,12 +54,13 @@
     code d'autorisation contre le jeton d'identité — c'est vous qui vous
     connectez, comme sur n'importe quel site ;</li>
     <li><strong>Supabase</strong> (Supabase Inc., hébergement dans l'Union
-    européenne), qui tient la liste des accès et distribue les cibles du
-    portefeuille. C'est le seul service qui reçoive des données vous
-    concernant ; les deux paragraphes suivants disent exactement
-    lesquelles ;</li>
-    <li><strong>Binance</strong>, pour relever les prix publics des marchés.
-    Ces requêtes ne portent aucune information vous concernant ;</li>
+    européenne), qui tient la liste des accès, distribue les cibles du
+    portefeuille et garde la copie de votre livre qui le rend identique sur vos
+    appareils. C'est le seul service qui reçoive des données vous concernant ;
+    les trois paragraphes suivants disent exactement lesquelles ;</li>
+    <li><strong>Binance</strong> ou <strong>OKX</strong>, selon la place où
+    tourne votre livre, pour relever les prix publics des marchés. Ces requêtes
+    ne portent aucune information vous concernant ;</li>
     <li><strong>GitHub</strong>, pour vérifier qu'une mise à jour existe et la
     télécharger. Ces requêtes ne portent aucune information vous concernant.</li>
   </ul>
@@ -89,12 +91,39 @@
     <li>le motif d'un arrêt, et un message d'erreur tronqué à deux cents
     caractères, s'il y en a un.</li>
   </ul>
-  <p><strong>Aucune position, aucun poids par marché, aucun prix.</strong>
-  Ce relevé sert à savoir si le programme fonctionne chez ses utilisateurs.
+  <p><strong>Aucune position, aucun poids par marché, aucun prix dans ce
+  relevé.</strong> Il sert à savoir si le programme fonctionne chez ses
+  utilisateurs.
   Mais c'est bien une donnée personnelle — la courbe de valeur d'un
   portefeuille, rattachée à une personne identifiée —, et c'est pourquoi elle
   est annoncée ici plutôt que laissée à découvrir. Elle est effacée
   automatiquement au bout de <strong>90 jours</strong>.</p>
+
+  <h2>Votre livre, sur tous vos appareils</h2>
+  <p>Connecté sur plusieurs ordinateurs, vous voyez partout le même livre de
+  papier. Un seul d'entre eux le mène — celui où vous vous êtes connecté le plus
+  récemment — et les autres le suivent, prêts à le reprendre s'il s'éteint. Pour
+  cela, QUARTZ garde chez Supabase :</p>
+  <ul>
+    <li>l'état de votre livre : ses positions, son réalisé, ses frais, son
+    funding, sa halte éventuelle, les cibles qu'il tient ;</li>
+    <li>sa courbe de valeur, un point par minute ;</li>
+    <li>son journal : rebalancements, cibles reçues, funding, haltes ;</li>
+    <li>la liste de vos appareils : le nom que leur système leur donne, ce
+    système, la version de QUARTZ, l'heure de votre dernière connexion sur
+    chacun ;</li>
+    <li>les demandes passées d'un appareil à l'autre : poser ou lever une halte,
+    ouvrir un livre neuf.</li>
+  </ul>
+  <p>Ces données ne servent qu'à cela : vous montrer le même livre partout, et
+  le faire tourner sur un seul appareil à la fois. Elles reposent sur
+  l'exécution du service que vous utilisez. <strong>Elles ne sont lisibles que
+  depuis votre compte</strong> : chaque lecture passe par une fonction qui
+  vérifie à qui appartient le livre, et aucun autre utilisateur ne peut y
+  accéder. Comme toute donnée hébergée, elles restent techniquement accessibles
+  à qui administre la base ; elles ne sont consultées que pour faire fonctionner
+  le service ou répondre à une demande de votre part. Sans connexion, rien de
+  tout cela ne part : le livre reste sur l'ordinateur où il tourne.</p>
 
   <h2>Ce que QUARTZ ne fait pas</h2>
   <ul>
@@ -110,6 +139,13 @@
   sont effacés au bout de 90 jours, automatiquement. Les décisions prises sur un
   accès — ouverture, suspension, retrait — sont gardées aussi longtemps que
   l'accès existe, parce qu'elles expliquent son état.</p>
+  <p>La copie de votre livre s'efface d'elle-même. La courbe est gardée 400
+  jours : à la minute pendant 14 jours, puis un point par heure. Le journal est
+  gardé 30 jours, mais l'ordinateur qui l'a écrit le garde entier. Un livre
+  remplacé par un neuf est gardé 30 jours, de même que les demandes entre
+  appareils. Un appareil qui ne se connecte plus est oublié au bout de 180
+  jours. L'état du livre en cours est gardé tant que l'accès existe ; tout ce qui
+  touche un compte retiré est effacé avec lui.</p>
   <p>La session locale expire d'elle-même après sept jours sans usage. Vous
   pouvez l'effacer immédiatement avec la commande <code>/logout</code> dans le
   programme, ou en supprimant le dossier ci-dessus. Vous pouvez aussi retirer
@@ -121,8 +157,9 @@
   <h2>Vos droits</h2>
   <p>Ce qui est sur votre machine est sous votre main directe : les consulter,
   c'est ouvrir les fichiers ; les effacer, c'est les supprimer.</p>
-  <p>Pour ce qui est conservé chez Supabase — votre accès et les relevés de la
-  boucle —, vous disposez des droits d'accès, de rectification, d'effacement,
+  <p>Pour ce qui est conservé chez Supabase — votre accès, les relevés de la
+  boucle et la copie de votre livre —, vous disposez des droits d'accès, de
+  rectification, d'effacement,
   de limitation et de portabilité. Vous pouvez également
   <strong>vous opposer</strong> à l'enregistrement de votre adresse, puisqu'il
   repose sur l'intérêt légitime et non sur votre consentement. Écrivez à
